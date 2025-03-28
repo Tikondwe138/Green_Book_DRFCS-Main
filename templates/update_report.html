@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Update Report{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Update Report</h2>
+    <form method="POST" action="{{ url_for('routes.update_report', report_id=report.report_id) }}">
+        <label for="title">Report Title:</label>
+        <input type="text" name="title" value="{{ report.title }}" required>
+
+        <label for="description">Report Description:</label>
+        <textarea name="description" required>{{ report.description }}</textarea>
+
+        <label for="content">Report Content:</label>
+        <textarea name="content" required>{{ report.content }}</textarea>
+
+        <button type="submit" class="btn">Update Report</button>
+    </form>
+</div>
+{% endblock %}

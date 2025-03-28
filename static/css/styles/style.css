@@ -1,0 +1,918 @@
+/* ================================
+   CSS Variables for Consistency
+=================================== */
+:root {
+  --primary-color: #04634D;
+  --secondary-color: #1DBF73;
+  --light-bg: #F8F9FA;
+  --dark-text: #333;
+  --white: #fff;
+  --font-family: 'Poppins', sans-serif;
+  --transition-speed: 0.3s;
+  --border-radius: 5px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌎 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+/* 📌 Body & Background */
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  height: 100vh;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* 🌿 Admin Dashboard Theme */
+.admin-dashboard {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* 🍃 Beneficiary Dashboard Theme */
+.beneficiary-dashboard {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* 📌 Navigation Bar */
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  padding: 10px 15px;
+  margin: 0 5px;
+  transition: background var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Navigation Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: var(--border-radius);
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive Header Styles */
+.logo-container h1 {
+  margin: 0;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 400px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.sidebar-toggle-mobile {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* 🌠 Slim Slideshow */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  max-width: 80%;
+}
+
+/* ✨ Slide Animation */
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Responsive Slideshow */
+@media screen and (max-width: 768px) {
+  .slide-image {
+    height: 200px;
+  }
+
+  .slide-text {
+    font-size: 14px;
+    bottom: 10px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slide-image {
+    height: 150px;
+  }
+
+  .slide-text {
+    font-size: 12px;
+    bottom: 8px;
+    left: 10px;
+  }
+}
+
+/* 📅 Recent News & Events */
+.recent-news {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.recent-news h2 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.recent-news ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recent-news li {
+  margin-bottom: 10px;
+  padding: 12px;
+  background-color: #f4f4f4;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.recent-news li:hover {
+  background-color: #eaeaea;
+}
+
+.recent-news a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.recent-news a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Recent News */
+@media screen and (max-width: 768px) {
+  .recent-news {
+    padding: 15px;
+  }
+
+  .recent-news h2 {
+    font-size: 20px;
+  }
+
+  .recent-news li {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recent-news h2 {
+    font-size: 18px;
+  }
+
+  .recent-news li {
+    padding: 8px;
+  }
+}
+
+/* Sidebar Styles for Desktop */
+.sidebar {
+  width: 221px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: var(--white);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-speed) ease;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 5; /* Ensure sidebar is above content */
+}
+
+/* Show the sidebar on large screens (Desktop) */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: flex; /* Always show the sidebar on large screens */
+  }
+}
+
+/* Hide sidebar on smaller screens by default */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none; /* Hide sidebar initially on mobile/tablet */
+  }
+
+  .sidebar.mobile-open {
+    display: flex; /* Show sidebar when mobile-open class is added */
+  }
+}
+
+/* Sidebar link styles */
+.sidebar a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 15px;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  display: block;
+  transition: background var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active,
+.sidebar a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  outline: none;
+}
+
+.sidebar ul,
+.sidebar li a {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Mobile Sidebar Toggle Button */
+.sidebar-toggle-mobile {
+  display: block; /* Show on mobile */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+@media (min-width: 1024px) {
+  .sidebar-toggle-mobile {
+    display: none; /* Hide toggle button on desktop */
+  }
+}
+
+/* Add the background blur effect for messages */
+.message-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Styling for the popup message card */
+.flashes {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+  list-style-type: none;
+}
+
+.popup-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.popup-message.success {
+  color: green;
+}
+
+.popup-message.error {
+  color: red;
+}
+
+.popup-message.info {
+  color: blue;
+}
+
+.popup-message.warning {
+  color: orange;
+}
+
+/* Fade-in animation for messages */
+.message-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar Dropdown Styles */
+.sidebar-dropdown-content {
+  display: none;
+}
+
+.sidebar-dropdown:hover .sidebar-dropdown-content {
+  display: block;
+}
+
+.sidebar-dropdown-content a {
+  padding-left: 30px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.mobile-open {
+    left: 0;
+  }
+
+  .container {
+    margin-left: 0;
+    padding: 10px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .container.mobile-shifted {
+    margin-left: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .sidebar-toggle-mobile {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    display: none; /* Hide the navbar links on mobile */
+  }
+
+  .sidebar {
+    display: block; /* Show sidebar by default on mobile */
+  }
+
+  .sidebar-toggle-mobile {
+    display: block; /* Show the menu button on mobile */
+  }
+
+  .container.mobile-shifted {
+    margin-left: 250px; /* Shift content to the right when sidebar is open */
+  }
+}
+
+/* 🌎 Page Layout */
+.container {
+  margin-left: 260px; /* Adjusted for Sidebar */
+  padding: 20px;
+}
+
+/* 📌 Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🛠️ Buttons */
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+  background-color: #A5A5A5;
+  cursor: not-allowed;
+}
+
+/* Loading Animation on Button Click */
+.btn.loading {
+  pointer-events: none;
+}
+
+.btn.loading::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--white);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* 📊 Adaptive Dashboard Cards */
+.dashboard-card-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 10px 0;
+}
+
+.dashboard-card p {
+  font-size: 16px;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+}
+
+.dashboard-card .card-icon {
+  width: 80px; /* Set the width */
+  height: 80px; /* Set the height */
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the icon */
+  object-fit: cover; /* Ensure the image fits properly */
+  border-radius: 50%; /* Optionally, add rounded corners */
+}
+
+.dashboard-card .btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card .btn:hover {
+  background-color: var(--secondary-color);
+  color: #04634D;
+}
+
+/* 📌 Adaptive Tables */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* 📌 Adaptive Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  margin: 5px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.pagination a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* 📌 Adaptive Forms & Input Fields */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: all var(--transition-speed) ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(29, 191, 115, 0.5);
+  outline: none;
+}
+
+/* Chat Container */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.channel-selection {
+  margin-bottom: 20px;
+}
+
+.channel-selection label {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #555;
+}
+
+#channel {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* Message Input and Send Button Area */
+.message-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.send-button:hover {
+  background-color: #45a049;
+}
+
+/* Chat Box Styling */
+.chat-box {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Fixed, Responsive Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  width: 120px; /* Smaller logo size */
+  height: auto;
+  margin-right: 8px;
+}
+
+.footer-text p {
+  margin: 2px 0;
+  line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  footer {
+    font-size: 10px;
+    padding: 6px 0;
+  }
+  .footer-logo img {
+    width: 40px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: center;
+  }
+  .footer-logo img {
+    width: 100px; /* Adjust logo size for smaller screens */
+  }
+}
+
+/* 📱 Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+  .dashboard-card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .dashboard-card {
+    padding: 15px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .pagination a {
+    padding: 6px 10px;
+    margin: 3px;
+  }
+}
+
+/* 📱 Mobile Adjustments for 375px width */
+@media screen and (max-width: 375px) {
+  table {
+    font-size: 12px; /* Smaller text size for tables on narrow screens */
+    min-width: 360px; /* Adjust table width for narrow screens */
+  }
+
+  th, td {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .table-container {
+    margin: 15px 0; /* Reduced margin for better alignment */
+  }
+
+  /* Ensuring text is readable in tables */
+  td {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis when text is too long */
+  }
+}
+
+/* 📌 Responsive Pagination for Tables */
+@media screen and (max-width: 375px) {
+  .pagination {
+    flex-direction: column; /* Stack pagination vertically for smaller screens */
+  }
+
+  .pagination a {
+    padding: 6px 10px;
+    margin-bottom: 5px; /* Add spacing between pagination items */
+    font-size: 12px; /* Adjust font size */
+  }
+}

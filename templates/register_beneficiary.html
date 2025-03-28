@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Register Beneficiary{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Register Beneficiary</h2>
+    <form method="POST" action="{{ url_for('routes.register_beneficiary') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required>
+
+        <label for="national_id">National ID:</label>
+        <input type="text" name="national_id" required>
+
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+
+<script>
+function validateBeneficiaryRegistration() {
+    const nationalID = document.getElementById("national_id").value;
+    if (nationalID.length !== 12 || isNaN(nationalID)) {
+        alert("National ID must be exactly 12 digits.");
+        return false;
+    }
+    return true;
+}
+</script>
+{% endblock %}

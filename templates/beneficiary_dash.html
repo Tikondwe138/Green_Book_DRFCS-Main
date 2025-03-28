@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Beneficiary Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-header">
+    <h2>Welcome, {{ current_user.name }}!</h2>
+</div>
+
+<!-- Submit Aid Request -->
+<div class="dashboard-card">
+    <h3>Submit Aid Request</h3>
+    <form method="POST" action="{{ url_for('routes.add_aid_request') }}">
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea>
+
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" step="0.01" required>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+<!-- Your Aid Requests -->
+<div class="dashboard-card">
+    <h3>Your Aid Requests</h3>
+    <table>
+        <tr>
+            <th>Request ID</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Date Created</th>
+        </tr>
+        {% for request in aid_requests %}
+        <tr>
+            <td>{{ request.request_id }}</td>
+            <td>{{ request.description }}</td>
+            <td>{{ request.status }}</td>
+            <td>{{ request.amount }}</td>
+            <td>{{ request.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+        </div>
+</div>
+
+<script>
+function validateAidRequest() {
+    var amount = document.querySelector('input[name="amount"]').value;
+    if(parseFloat(amount) <= 0) {
+        alert("Amount must be greater than 0");
+        return false;
+    }
+    return true;
+}
+</script>
+
+<style>
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.notifications {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.chat-report .action-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.action-links .btn {
+    margin: 5px;
+}
+</style>
+
+{% endblock %}
+
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}View Disasters{% endblock %}
+{% block content %}
+<div class="dashboard-header">
+    <h2>Disasters</h2>
+</div>
+
+<div class="dashboard-card">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Severity</th>
+            <th>Status</th>
+        </tr>
+        {% for disaster in disasters %}
+        <tr>
+            <td>{{ disaster.id }}</td>
+            <td>{{ disaster.name }}</td>
+            <td>{{ disaster.description }}</td>
+            <td>{{ disaster.location }}</td>
+            <td>{{ disaster.severity }}</td>
+            <td>{{ disaster.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+}
+
+
+
+

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Real-Time Chat{% endblock %}
+{% block content %}
+<div class="chat-container">
+    <h2> Real-Time Communication</h2>
+
+    <!-- Notifications Area -->
+ <div id="notifications" class="dashboard-card">
+    <h3>Notifications</h3>
+    <ul id="notification-list"></ul>
+</div>
+
+    <!-- Chat Messages -->
+    <div class="chat-box">
+        <h3>Chat Messages:</h3>
+        <ul id="messages" class="messages-list"></ul>
+    </div>
+
+    <!-- Message Input Area -->
+    <div class="message-area">
+        <input id="message" placeholder="Type a message..." class="input-field" />
+        <button onclick="sendMessage()" class="send-button">Send</button>
+    </div>
+</div>
+<!-- Task List -->
+<div class="task-container">
+    <h3>Task Management</h3>
+    <ul id="task-list"></ul>
+    <button onclick="createNewTask()">Create New Task</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+<script>
+    // Display tasks in real-time
+    socket.on('receive_task_update', function(data) {
+        var taskList = document.getElementById("task-list");
+        var li = document.createElement("li");
+        li.textContent = data.message;
+        taskList.appendChild(li);
+    });
+
+    // Create a new task via SocketIO (Example function)
+    function createNewTask() {
+        var title = prompt("Enter task title:");
+        var description = prompt("Enter task description:");
+        var assignedTo = prompt("Assign to user ID:");
+
+        socket.emit('create_task', { 'title': title, 'description': description, 'assigned_to': assignedTo });
+    }
+</script>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    // Send message to server
+    function sendMessage() {
+        var message = document.getElementById("message").value;
+        var receiverId = document.getElementById("receiver_id").value; // Optional input for private messages
+        if (message.trim() !== "") {
+            socket.emit('send_message', { 'message': message, 'receiver_id': receiverId });
+            document.getElementById("message").value = '';
+        }
+    }
+
+    // Receive message from server
+    socket.on('receive_message', function(data) {
+        var li = document.createElement("li");
+        li.textContent = data.username + " (" + data.timestamp + "): " + data.message;
+        document.getElementById("messages").appendChild(li);
+    });
+
+    // Receive notifications (task updates, emergencies, etc.)
+    socket.on('receive_notification', function(data) {
+        var notifications = document.getElementById("notification-list");
+        var newNotification = document.createElement("li");
+        newNotification.textContent = data.message;
+        notifications.appendChild(newNotification);
+    });
+</script>
+{% endblock %}

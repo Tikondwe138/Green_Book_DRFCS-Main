@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Chat History{% endblock %}
+{% block content %}
+<h2>Chat History</h2>
+<div class="chat-log">
+    {% for chat in chat_logs %}
+        <p><strong>{{ chat.sender.name }}:</strong> {{ chat.message }} <small>{{ chat.timestamp }}</small></p>
+    {% endfor %}
+</div>
+{% endblock %}

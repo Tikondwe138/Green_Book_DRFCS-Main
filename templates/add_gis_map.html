@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Add GIS Map{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add GIS Map</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <!-- Disaster Name -->
+        <div>
+            <label for="disaster_name">{{ form.disaster_name.label }}</label>
+            {{ form.disaster_name() }}
+        </div>
+
+        <!-- Coordinates -->
+        <div>
+            <label for="coordinates">{{ form.coordinates.label }}</label>
+            {{ form.coordinates() }}
+        </div>
+
+        <!-- Description -->
+        <div>
+            <label for="description">{{ form.description.label }}</label>
+            {{ form.description() }}
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            {{ form.submit() }}
+        </div>
+
+        <!-- Flash Messages (Display if any) -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="alert alert-{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </form>
+</div>
+{% endblock %}

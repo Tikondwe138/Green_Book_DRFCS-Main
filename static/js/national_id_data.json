@@ -1,0 +1,32 @@
+{
+    "100001": {
+        "name": "John Banda",
+        "dob": "1985-07-12",
+        "gender": "Male",
+        "address": "Lilongwe, Malawi"
+    },
+    "100002": {
+        "name": "Grace Chikuni",
+        "dob": "1992-04-25",
+        "gender": "Female",
+        "address": "Blantyre, Malawi"
+    },
+    "100003": {
+        "name": "Peter Nkhoma",
+        "dob": "1988-11-09",
+        "gender": "Male",
+        "address": "Mzuzu, Malawi"
+    },
+    "100004": {
+        "name": "Alice Kamanga",
+        "dob": "1995-06-30",
+        "gender": "Female",
+        "address": "Zomba, Malawi"
+    },
+    "100005": {
+        "name": "Charles Phiri",
+        "dob": "1979-09-22",
+        "gender": "Male",
+        "address": "Kasungu, Malawi"
+    }
+}

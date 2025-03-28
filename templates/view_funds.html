@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}View Funds{% endblock %}
+{% block content %}
+<div class="funds-container">
+    <h2>Funds Overview</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Donor Name</th>
+                <th>Amount</th>
+                <th>Allocated To</th>
+                <th>Date Received</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fund in funds %}
+            <tr>
+                <td>{{ fund.donor_name }}</td>
+                <td>{{ fund.amount }}</td>
+                <td>{{ fund.allocated_to }}</td>
+                <td>{{ fund.date_received }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

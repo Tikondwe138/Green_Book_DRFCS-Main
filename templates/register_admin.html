@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Register Admin{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Register Admin</h2>
+    <form method="POST" action="{{ url_for('routes.register_admin') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <label for="department">Department:</label>
+        <input type="text" name="department" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required>
+
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+
+<script>
+function validateAdminRegistration() {
+    const password = document.getElementById("password").value;
+    const phone = document.getElementById("phone").value;
+    const twofa = document.getElementById("2fa_code").value;
+    const passwordHelp = document.getElementById("password-help");
+    const phoneHelp = document.getElementById("phone-help");
+    const twofaHelp = document.getElementById("2fa-help");
+
+    // Reset error messages
+    passwordHelp.textContent = "";
+    phoneHelp.textContent = "";
+    twofaHelp.textContent = "";
+
+    // Password strength validation
+    const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!strongPassword.test(password)) {
+        passwordHelp.textContent = "Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a digit, and a special character.";
+        return false;
+    }
+
+    // Phone number validation
+    const phonePattern = /^[0-9]{10,15}$/;
+    if (!phonePattern.test(phone)) {
+        phoneHelp.textContent = "Phone number must be between 10 and 15 digits.";
+        return false;
+    }
+
+    // 2FA code validation (if provided)
+    if (twofa && isNaN(twofa)) {
+        twofaHelp.textContent = "2FA code must be numeric.";
+        return false;
+    }
+
+    return true;
+}
+</script>
+{% endblock %}
+

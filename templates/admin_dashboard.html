@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+
+<!-- Fund Allocation Chart -->
+<div class="dashboard-card">
+    <h3>Fund Allocation Chart</h3>
+    <canvas id="fundChart"></canvas>
+</div>
+
+
+<!-- Admin Action Buttons -->
+<div class="dashboard-card-container">
+    <div class="dashboard-card">
+<div class="card-icon">
+        <img src="{{ url_for('static', filename='images/add_fund_icon.png') }}" alt="Report Icon" style="height: 90px;">
+      </div>
+        <a href="{{ url_for('routes.add_fund') }}" class="btn">Add Fund</a>
+    </div>
+
+
+    <div class="dashboard-card">
+<div class="card-icon">
+        <img src="{{ url_for('static', filename='images/add_disaster_icon.png') }}" alt="Report Icon" style="height: 90px;">
+      </div>
+        <a href="{{ url_for('routes.add_disaster') }}" class="btn">Add Disaster</a>
+    </div>
+
+
+    <div class="dashboard-card">
+<div class="card-icon">
+        <img src="{{ url_for('static', filename='images/add_gis_map_icon.png') }}" alt="Report Icon" style="height: 90px;">
+      </div>
+        <a href="{{ url_for('routes.add_gis_map') }}" class="btn">Add GIS Map</a>
+    </div>
+
+
+    <div class="dashboard-card">
+<div class="card-icon">
+        <img src="{{ url_for('static', filename='images/card_report_icon.png') }}" alt="Report Icon" style="height: 90px;">
+      </div>
+        <a href="{{ url_for('routes.generate_report') }}" class="btn">Generate Report</a>
+    </div>
+</div>
+
+<!-- Aid Requests -->
+<div class="dashboard-card">
+    <h3>Aid Requests</h3>
+    <table>
+        <tr>
+            <th>Request ID</th>
+            <th>Beneficiary ID</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Submitted At</th>
+        </tr>
+        {% for request in aid_requests %}
+        <tr>
+            <td>{{ request.request_id }}</td>
+            <td>{{ request.beneficiary_id }}</td>
+            <td>{{ request.description }}</td>
+            <td>{{ request.amount }}</td>
+            <td>{{ request.status }}</td>
+            <td>
+                 {% if request.created_at %}
+                {{ request.created_at.strftime('%Y-%m-%d %H:%M:%S') }}
+                 {% else %}
+                          N/A
+                {% endif %}
+                 </td>        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+<!-- Chart.js and Socket.IO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Fund Allocation Chart Script -->
+<script>
+    // Fetch fund statistics and render the chart
+    fetch('/fund_statistics')
+        .then(response => response.json())
+        .then(data => {
+            var ctx = document.getElementById("fundChart").getContext("2d");
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.donors,
+                    datasets: [{
+                        label: 'Funds Allocated',
+                        data: data.amounts,
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(153, 102, 255, 0.6)',
+                            'rgba(255, 159, 64, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching fund statistics:", error);
+        });
+</script>
+
+<!-- Real-Time Chat and Notifications -->
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    function sendMessage() {
+        var message = document.getElementById("chat-input").value;
+        socket.emit('send_message', { username: "{{ current_user.name }}", message: message });
+        document.getElementById("chat-input").value = '';
+    }
+
+    // Handle received chat messages
+    socket.on('receive_message', function(data) {
+        var messages = document.getElementById("messages");
+        var newMessage = document.createElement("div");
+        newMessage.textContent = data.username + ": " + data.message;
+        messages.appendChild(newMessage);
+    });
+
+    // Handle received notifications
+    socket.on('receive_notification', function(data) {
+        var notifications = document.getElementById("notifications");
+        var newNotification = document.createElement("li");
+        newNotification.textContent = data.message;
+        notifications.appendChild(newNotification);
+    });
+</script>
+{% endblock %}

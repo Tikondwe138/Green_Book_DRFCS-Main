@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="home-header">
+    <h1>Welcome to the Disaster Relief Management System</h1>
+    <p>Track and manage disaster relief efforts effectively.</p>
+</div>
+
+<!-- Slim Slideshow -->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/slide1.jpg') }}" alt="Disaster Relief" class="slide-image">
+    <div class="slide-text">Addressing Energy Poverty and Housing Shortages in Europe</div>
+  </div>
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/slide2.jpg') }}" alt="Community Support" class="slide-image">
+    <div class="slide-text">Home Equals campaign</div>
+  </div>
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/slide3.jpg') }}" alt="Volunteer Training" class="slide-image">
+    <div class="slide-text">Training and Preparedness</div>
+  </div>
+</div>
+
+ <div class="dashboard-card-container">
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <img src="{{ url_for('static', filename='images/card_report_icon.png') }}" alt="Report Icon" style="height: 40px;">
+      </div>
+      <h3>Total Disaster Reports</h3>
+      <p id="total-reports" style="font-weight: bold;">15</p>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <img src="{{ url_for('static', filename='images/emergency_icon.png') }}" alt="Emergency Icon" style="height: 40px;">
+      </div>
+      <h3>Ongoing Emergencies</h3>
+      <p id="ongoing-emergencies" style="font-weight: bold;">3</p>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <img src="{{ url_for('static', filename='images/volunteer_icon.png') }}" alt="Volunteer Icon" style="height: 40px;">
+      </div>
+      <h3>Active Volunteers</h3>
+      <p id="active-volunteers" style="font-weight: bold;">120</p>
+    </div>
+
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <img src="{{ url_for('static', filename='images/card_fund_icon.png') }}" alt="Funds Icon" style="height: 40px;">
+      </div>
+      <h3>Funds Raised</h3>
+      <p id="funds-raised" style="font-weight: bold;">$250,000</p>
+    </div>
+  </div>
+
+<!-- Recent News and Events -->
+<div class="recent-news">
+  <h2>Recent News & Events</h2>
+  <ul>
+    <li>
+      <h3>The Plight of Grace</h3>
+      <p>March 7, 2025 – Grace January suddenly heard people shouting “Water! Water! Water!” as her house was flooded in the aftermath of Cyclone Idai. Help her rebuild...</p>
+      <a href="https://www.habitat.org/emea/stories/plight-grace" target="_blank">Read More</a>
+    </li>
+    <li>
+      <h3>Malawi Struggles with Floods</h3>
+      <p>February 5, 2025 – Flooding in Malawi has affected nearly one million people, forcing many to leave their homes and lose possessions. Emergency shelter and sanitation are urgently needed...</p>
+      <a href="https://www.habitat.org/emea/stories/malawi-struggles-floods" target="_blank">Read More</a>
+    </li>
+    <li>
+      <h3>Keeping Girls in Schools</h3>
+      <p>December 7, 2024 – We call for gender parity and commit to putting young schoolgirls and women at the heart of our water, sanitation, and hygiene initiatives. Without proper facilities, many miss school...</p>
+      <a href="https://www.habitat.org/emea/stories/keeping-girls-schools" target="_blank">Read More</a>
+    </li>
+  </ul>
+</div>
+<script>
+  // Function to generate a random number within a range
+  function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Function to format numbers (including currency)
+  function formatNumber(value, isCurrency = false) {
+    if (isCurrency) {
+      // Format as currency with a dollar sign and commas for thousands
+      return `$${value.toLocaleString()}`;
+    }
+    // Regular number formatting with commas for thousands
+    return value.toLocaleString();
+  }
+
+  // Function to increment a number smoothly to a target value
+  function incrementNumber(elementId, targetValue, intervalTime) {
+    const element = document.getElementById(elementId);
+    let currentValue = parseInt(element.textContent.replace(/[^\d.-]/g, ''), 10) || 0; // Get the current number, default to 0
+    const step = Math.max(1, Math.floor((targetValue - currentValue) / 50)); // Calculate the step increment dynamically
+
+    // Create an interval to increment the number smoothly
+    const interval = setInterval(() => {
+      currentValue += step;
+
+      if (currentValue >= targetValue) {
+        clearInterval(interval); // Stop the interval when the target is reached
+        currentValue = targetValue; // Ensure the final value is exactly the target
+      }
+
+      // Update the element text with the formatted number
+      if (elementId === 'funds-raised') {
+        element.textContent = formatNumber(currentValue, true); // Format as currency for funds
+      } else {
+        element.textContent = formatNumber(currentValue); // Regular number formatting
+      }
+    }, intervalTime);
+  }
+
+  // Function to update statistics smoothly on page load
+  window.onload = function() {
+    // Set random target values for each statistic
+    const totalReportsTarget = getRandomNumber(30, 100);
+    const ongoingEmergenciesTarget = getRandomNumber(1, 10);
+    const activeVolunteersTarget = getRandomNumber(100, 500);
+    const fundsRaisedTarget = getRandomNumber(200000, 500000);
+
+    // Increment each statistic to its target value
+    incrementNumber('total-reports', totalReportsTarget, 50);
+    incrementNumber('ongoing-emergencies', ongoingEmergenciesTarget, 100);
+    incrementNumber('active-volunteers', activeVolunteersTarget, 70);
+    incrementNumber('funds-raised', fundsRaisedTarget, 100);
+  }
+</script>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+{% endblock %}
+
+

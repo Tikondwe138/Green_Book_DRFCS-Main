@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="form-container">
+  <h2>Register</h2>
+  <a href="{{ url_for('routes.register_admin') }}" class="btn">Register Admin</a>
+  <a href="{{ url_for('routes.register_beneficiary') }}" class="btn">Register Beneficiary</a>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Add Fund{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Add Fund</h2>
+    <form method="POST" action="{{ url_for('routes.add_fund') }}">
+        <label for="donor_name">Donor Name:</label>
+        <input type="text" name="donor_name" required placeholder="Donor Name">
+
+        <label for="amount">Amount:</label>
+        <input type="number" step="0.01" name="amount" required placeholder="Fund Amount">
+
+        <label for="allocated_to">Allocated To:</label>
+        <input type="text" name="allocated_to" required placeholder="Allocated Admin ID">
+
+        <button type="submit" class="btn">Add Fund</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+

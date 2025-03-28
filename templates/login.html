@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="form-container">
+  <h2>Login</h2>
+  <form method="POST" onsubmit="return validateLogin();">
+    <label for="email">Email:</label>
+    <input type="email" name="email" required placeholder="Enter your email">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required placeholder="Enter your password">
+    <br>
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+<script>
+function validateLogin() {
+    // Additional validations if needed
+    return true;
+}
+</script>
+{% endblock %}
+

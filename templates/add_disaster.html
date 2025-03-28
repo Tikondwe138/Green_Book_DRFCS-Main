@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Add Disaster{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Add Disaster</h2>
+    <form method="POST" action="{{ url_for('routes.add_disaster') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required placeholder="Disaster Name">
+
+        <label for="description">Description:</label>
+        <textarea name="description" placeholder="Describe the disaster" required></textarea>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required placeholder="Location">
+
+        <label for="severity">Severity:</label>
+        <select name="severity" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <label for="status">Status:</label>
+        <select name="status" required>
+            <option value="Active">Active</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+
+        <button type="submit" class="btn">Add Disaster</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Green Book{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles/style.css') }}">
+</head>
+<body>
+  <!-- Header -->
+   <header class="navbar">
+    <div class="logo-container">
+      <h1>
+        <a href="{{ url_for('routes.home') }}">
+          <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="GreenBook Logo" style="height:150px; vertical-align: middle; margin-right:20px;">
+        </a>
+      </h1>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." class="search-bar">
+    </div>
+    <nav class="nav-links">
+      <ul>
+        {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('routes.home') }}">
+             <p style="font-weight: bold; display: flex; align-items: center;">
+              <img src="{{ url_for('static', filename='images/profile_icon.png') }}" alt="Profile Image" style="height: 30px; width: 30px; border-radius: 50%; margin-right: 10px;">
+              Welcome Back {{ current_user.name }} !
+            </p>
+          </a></li>
+        {% else %}
+          <li><a href="{{ url_for('routes.login') }}">Login</a></li>
+          <li><a href="{{ url_for('routes.register') }}">Register</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <button class="sidebar-toggle-mobile">☰</button>
+  </header>
+
+  <div class="main-wrapper">
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-content">
+    {% if current_user.is_authenticated %}
+      {% if current_user.role == 'admin' %}
+        <ul>
+          <li><a href="{{ url_for('routes.admin_Dashboard') }}">
+            <img src="{{ url_for('static', filename='images/admin_icon.png') }}" alt="Admin Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Admin Control Panel
+          </a></li>
+          <li><a href="{{ url_for('routes.view_disasters') }}">
+            <img src="{{ url_for('static', filename='images/disaster_icon.png') }}" alt="Disaster Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Disaster Management
+          </a></li>
+          <li><a href="{{ url_for('routes.view_funds') }}">
+            <img src="{{ url_for('static', filename='images/fund_icon.png') }}" alt="Fund Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Fund Allocation
+          </a></li>
+          <li><a href="{{ url_for('routes.view_gis_maps') }}">
+            <img src="{{ url_for('static', filename='images/gis_icon.png') }}" alt="GIS Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Interactive GIS Maps
+          </a></li>
+          <li><a href="{{ url_for('routes.view_reports') }}">
+            <img src="{{ url_for('static', filename='images/report_icon.png') }}" alt="Report Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Generate Reports
+          </a></li>
+          <li><a href="{{ url_for('routes.chat') }}">
+            <img src="{{ url_for('static', filename='images/chat_icon.png') }}" alt="Chat Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Live Support Chat
+          </a></li>
+        </ul>
+      {% elif current_user.role == 'beneficiary' %}
+        <ul>
+          <li><a href="{{ url_for('routes.beneficiary_dashboard') }}">
+            <img src="{{ url_for('static', filename='images/dashboard_icon.png') }}" alt="Dashboard Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Beneficiary Dashboard
+          </a></li>
+          <li><a href="{{ url_for('routes.view_disasters') }}">
+            <img src="{{ url_for('static', filename='images/disaster_icon.png') }}" alt="Disaster Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Disaster Management
+          </a></li>
+          <li><a href="{{ url_for('routes.view_funds') }}">
+            <img src="{{ url_for('static', filename='images/fund_icon.png') }}" alt="Fund Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Fund Allocation
+          </a></li>
+          <li><a href="{{ url_for('routes.view_gis_maps') }}">
+            <img src="{{ url_for('static', filename='images/gis_icon.png') }}" alt="GIS Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+            Interactive GIS Maps
+          </a></li>
+        </ul>
+      {% endif %}
+      <div class="user-info">
+        <a href="{{ url_for('routes.logout') }}">
+          <img src="{{ url_for('static', filename='images/logout_icon.png') }}" alt="Logout Icon" style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;">
+          Logout
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</aside>
+
+    <!-- Main Content Area -->
+    <main>
+      <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="message-popup">
+              <ul class="flashes">
+                {% for category, message in messages %}
+                  <li class="popup-message {{ category }}">{{ message }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='images/footer logo .png') }}" alt="GreenBook Logo" class="logo">
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2025 GreenBook. All rights reserved.</p>
+        <p>Green Book® International, a 501(C)(3) nonprofit organization.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Display flash messages temporarily
+      const messagePopup = document.querySelector('.message-popup');
+      if (messagePopup) {
+        messagePopup.classList.add('show');
+        setTimeout(function() {
+          messagePopup.classList.remove('show');
+        }, 5000);
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebarToggleMobile = document.querySelector('.sidebar-toggle-mobile');
+      const sidebar = document.querySelector('.sidebar');
+      const container = document.querySelector('.container');
+      sidebarToggleMobile.addEventListener('click', function() {
+        sidebar.classList.toggle('mobile-open');
+        container.classList.toggle('mobile-shifted');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
