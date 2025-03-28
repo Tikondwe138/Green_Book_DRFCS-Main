@@ -5,8 +5,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_socketio import SocketIO
-from .models import AidRequest, db, Users, Beneficiary, Admin, Fund, Disaster, GisMap, Reports, ChatLog, VerificationLog
-from .socketio_events import handle_send_message, handle_connect, handle_disconnect
+from models import AidRequest, db, Users, Beneficiary, Admin, Fund, Disaster, GisMap, Reports, ChatLog, VerificationLog
+from socketio_events import handle_send_message, handle_connect, handle_disconnect
 import os
 
 # Initialize global variables

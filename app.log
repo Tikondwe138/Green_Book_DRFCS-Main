@@ -344,3 +344,454 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\
 INFO:werkzeug: * Restarting with stat
 ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
 ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-823-369
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Detected change in 'C:\\Users\\Tiko\\Desktop\\green_book-main\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 591-408-784

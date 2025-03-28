@@ -1,8 +1,7 @@
 import logging
 from flask_socketio import emit
-from .models import db, ChatLog  # Import db and ChatLog model
-from .socketio_instance import socketio  # Import socketio instance
-
+from models import db, ChatLog  # Import db and ChatLog model
+from socketio_instance import socketio  # Import socketio instance
 # Logging Configuration
 logging.basicConfig(filename='app.log', level=logging.INFO)
 

@@ -1,21 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired, Regexp
+from wtforms import StringField, SubmitField, TextAreaField
+from wtforms.validators import DataRequired, Length
 
 class AddGISMapForm(FlaskForm):
     disaster_name = StringField('Disaster Name', validators=[DataRequired()])
-
-    # Coordinates field with custom regex validator to ensure the format is "latitude, longitude"
-    coordinates = StringField(
-        'Coordinates',
-        validators=[
-            DataRequired(),
-            Regexp(
-                r'^-?\d+(\.\d+)?,\s*-?\d+(\.\d+)?$',  # regex to match valid latitude, longitude format
-                message="Coordinates must be in the format 'latitude, longitude'"
-            )
-        ]
-    )
-    description = StringField('Description')
+    coordinates = StringField('Coordinates (e.g., "[latitude, longitude]")', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired(), Length(max=255)])
     submit = SubmitField('Add GIS Map')
-

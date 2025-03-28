@@ -15,25 +15,45 @@ class Users(db.Model, UserMixin):
     role = db.Column(db.String(50), nullable=False)
     phone = db.Column(db.String(50), nullable=True)
 
-    # Fix for 'AttributeError' related to datetime
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)  # Correct usage of datetime
+    # Add latitude and longitude for location tracking
+    latitude = db.Column(db.Float, nullable=True)
+    longitude = db.Column(db.Float, nullable=True)
+
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def get_id(self):
         return str(self.user_id)
 
 
+class Task(db.Model):
+    task_id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255), nullable=False)
+    description = db.Column(db.String(500))
+    assigned_to = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    status = db.Column(db.String(50), default='pending')
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    assigned_user = db.relationship('Users', foreign_keys=[assigned_to],
+                                    backref=db.backref('assigned_tasks', lazy=True))
+
+    def __repr__(self):
+        return f"<Task {self.title} - Status: {self.status}>"
+
+
 # Model to log beneficiary verification events
 class VerificationLog(db.Model):
     log_id = db.Column(db.Integer, primary_key=True)
     beneficiary_id = db.Column(db.Integer, db.ForeignKey('beneficiary.beneficiary_id'), nullable=False)
-    verified_by = db.Column(db.Integer, nullable=False)  # Added this column to track the verified_by field
-    status = db.Column(db.String(50), nullable=False)  # Status of the verification ("Verified", "Pending", etc.)
-    remarks = db.Column(db.String(255), nullable=True)  # Additional remarks/details about the verification
-    verification_date = db.Column(db.DateTime, default=datetime.utcnow)  # Date of the verification
+    verified_by = db.Column(db.Integer, nullable=False)  # Track the user who verified
+    status = db.Column(db.String(50), nullable=False)  # Status: "Verified", "Failed"
+    remarks = db.Column(db.String(255), nullable=True)  # Additional remarks about the verification
+    verification_date = db.Column(db.DateTime, default=datetime.utcnow)  # Date and time of verification
 
     # Relationship to Beneficiary
     beneficiary = db.relationship('Beneficiary', backref=db.backref('verification_logs', lazy=True))
+
 
 
 class Admin(db.Model):
@@ -49,6 +69,16 @@ class Fund(db.Model):
     allocated_to = db.Column(db.Integer, db.ForeignKey('admin.admin_id'), nullable=True)
     date_received = db.Column(db.DateTime, default=lambda: datetime.now(datetime.timezone.utc))  # Fixed datetime issue
     last_updated = db.Column(db.DateTime, default=datetime.utcnow)  # Fixed datetime issue
+
+class FundTransaction(db.Model):
+    transaction_id = db.Column(db.Integer, primary_key=True)
+    fund_id = db.Column(db.Integer, db.ForeignKey('fund.fund_id'), nullable=False)
+    amount = db.Column(db.Float, nullable=False)
+    transaction_type = db.Column(db.String(50), nullable=False)  # "Allocation", "Donation", "Expenditure"
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    description = db.Column(db.String(255), nullable=True)
+
+    fund = db.relationship('Fund', backref=db.backref('transactions', lazy=True))
 
 
 class Beneficiary(db.Model):
@@ -93,7 +123,6 @@ class Disaster(db.Model):
 
 
 # GIS Map model (using consistent column "coordinates")
-
 class GisMap(db.Model):
     map_id = db.Column(db.Integer, primary_key=True)
     disaster_id = db.Column(db.Integer, db.ForeignKey('disaster.disaster_id'), nullable=False)
@@ -119,8 +148,9 @@ class Reports(db.Model):
     format_type = db.Column(db.String(20), default="PDF")
     user = db.relationship('Users', backref=db.backref('reports', lazy=True))
 
+    def __repr__(self):
+        return f"<Report {self.title}>"
 
-# Aid Request model
 class AidRequest(db.Model):
     request_id = db.Column(db.Integer, primary_key=True)
     beneficiary_id = db.Column(db.Integer, db.ForeignKey('beneficiary.beneficiary_id'), nullable=False)
@@ -128,18 +158,21 @@ class AidRequest(db.Model):
     status = db.Column(db.String(50), default='pending')
     amount = db.Column(db.Float, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)  # Fixed datetime issue
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow)  # Fixed datetime issue
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)  # Ensure it updates
 
 
-
-# Chat Log Model
 class ChatLog(db.Model):
     message_id = db.Column(db.Integer, primary_key=True)
     sender_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    receiver_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    receiver_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=True)  # Null for group chats
     message = db.Column(db.String(500), nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)  # Fixed datetime issue
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     # Relationships to get sender and receiver details
     sender = db.relationship('Users', foreign_keys=[sender_id], backref=db.backref('sent_messages', lazy=True))
-    receiver = db.relationship('Users', foreign_keys=[receiver_id], backref=db.backref('received_messages', lazy=True))
+    receiver = db.relationship('Users', foreign_keys=[receiver_id], backref=db.backref('received_messages', lazy=True),
+                               uselist=False)
+
+    def __repr__(self):
+        return f'<Message {self.message_id} from {self.sender.name} to {self.receiver.name if self.receiver else "All"}>'
+
